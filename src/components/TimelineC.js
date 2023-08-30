@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -48,7 +48,7 @@ export default  function TimelineC () {
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
-            {item.title} <DeleteIcon style={{color:'red'}} onClick={() => dispatch(deleteItem(item))}/>
+            {item.title} <DeleteIcon style={{color:'red', cursor:'pointer'}} onClick={() => dispatch(deleteItem(item))}/>
           </Typography>
           <Typography>{item.desc}</Typography>
         </TimelineContent>
